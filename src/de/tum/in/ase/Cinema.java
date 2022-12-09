@@ -1,6 +1,5 @@
 package de.tum.in.ase;
 
-import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Cinema implements Iterable<Movie> {
@@ -25,22 +24,16 @@ public class Cinema implements Iterable<Movie> {
 
     //Put @Override annotation on top of this iterator
     //Return a new Iterator and override and implement the hasNext() and next() methods in it
-
     @Override
     public Iterator<Movie> iterator() {
         return new Iterator<Movie>() {
-            int index = 0;
+            private int index = 0;
 
-            final Movie[] movies = getMovies();
-
-    //    If in movies there are no indices that haven't been iterated, then hasNext should return false
             @Override
             public boolean hasNext() {
                 return index < movies.length;
             }
 
-//             If in movies there are no indices left to iterate, then next should throw a NoSuchElementException.
-//             If there is indeed at least one more Movie element in the movies, return this next element.
             @Override
             public Movie next() {
                 if (!hasNext()) {
