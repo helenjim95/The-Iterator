@@ -1,5 +1,5 @@
 package de.tum.in.ase;
 
-public interface Iterator<T> extends Iterable<T> {
-    public Iterator<T> iterator();
+public interface Iterator<Movie> {
+    public Iterator<Movie> iterator();
 }

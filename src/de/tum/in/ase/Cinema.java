@@ -3,7 +3,7 @@ package de.tum.in.ase;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Cinema<Movie> implements Iterable<Movie> {
+public class Cinema implements Iterable<Movie> {
     //Implement for the Cinema class the Iterable (for Movie) interface
     // You can check Movie class to see the syntax for implementing such an interface
 
